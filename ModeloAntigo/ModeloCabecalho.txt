@@ -1,0 +1,17 @@
+/**
+ * Compusofts Informática
+ * Soluções em informação e automação
+ * 
+ * Emilia Yoshiko Takakura Omori Computadores ME
+ * CNPJ: 67.049.932/0001-08
+ * Av. Dom Pedro II, 146, Centro
+ * Presidente Venceslau, CEP 19400-000, Brasil
+ * Telefone: +55(18)3271-3245
+ * 
+ * Classe de ${TipoClasse}
+ * @name ${PrefixoClasse}${Nome}.php
+ * @access public 
+ * @license https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode CC BY-NC-ND
+ * @copyright (c) ${Ano}, Compusofts Informática 
+ * @author Marcel Aimar <marcel@compusofts.com.br>
+ */

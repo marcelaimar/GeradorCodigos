@@ -1,0 +1,17 @@
+<?php
+${Cabecalho}
+class ${Nome} {
+
+    //<editor-fold  defaultstate="collapsed" desc="Declaração de variáveis">    ${Declaracoes}
+    //</editor-fold>
+    //<editor-fold  defaultstate="collapsed" desc="Construtor">
+    function __construct() {${Inicializacoes}
+    }
+    //</editor-fold>
+    //<editor-fold  defaultstate="collapsed" desc="Atribuições">    ${Setters}
+    //</editor-fold>
+    //<editor-fold  defaultstate="collapsed" desc="Obtenções">    ${Getters}
+    //</editor-fold>
+}
+
+?>

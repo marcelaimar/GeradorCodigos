@@ -1,0 +1,32 @@
+<?php
+${Cabecalho}
+class ${PrefixoClasse}${Nome} {
+
+    //<editor-fold  defaultstate="collapsed" desc="Declaração de variáveis">
+    ${Declaracoes}
+
+    //</editor-fold>
+    //<editor-fold  defaultstate="collapsed" desc="Construtor">
+    public function __construct() {      
+        $this->${Nome} = NULL;    
+        $this->Estrutura${Nome} = NULL; 
+    }
+    //</editor-fold>	
+	//<editor-fold  defaultstate="collapsed" desc="Setters">     ${Setters}
+    //</editor-fold>	
+    //<editor-fold  defaultstate="collapsed" desc="Funções">
+    
+    //</editor-fold>  
+    //<editor-fold  defaultstate="collapsed" desc="Validações agrupadas">
+
+    public function Incluir(${Nome} $${Nome}) {
+        $this->set${Nome}($${Nome}); 
+	${AoIncluir}
+    }
+
+    //</editor-fold>
+    //<editor-fold  defaultstate="collapsed" desc="Validações">${Validacoes}
+    //</editor-fold>
+}
+
+?>

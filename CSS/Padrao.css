@@ -1,0 +1,263 @@
+/* 
+    Created on : 05/04/2014, 09:04:59
+    Author     : Marcel Aimar    
+*/
+
+
+
+
+html,body{
+    background: url("Imagem/Fundo.png");
+    overflow: auto;   
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    height: 100%;
+    color: #4D4D4D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;	
+}
+
+.select2-results .select2-highlighted{
+     box-shadow: 0 1px rgba(255,255,255,0.2) inset;
+    -webkit-box-shadow: 0 1px rgba(255,255,255,0.2) inset;
+    border-color: #262626 !important;
+    background: #4D4D4D; /* Old browsers */
+    background: -moz-linear-gradient(top, #4D4D4D 0%, #262626 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4D4D4D), color-stop(100%,#262626)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #4D4D4D 0%,#262626 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #4D4D4D 0%,#262626 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #4D4D4D 0%,#262626 100%); /* IE10+ */
+    background: linear-gradient(top, #4D4D4D 0%,#262626 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4D4D4D', endColorstr='#262626',GradientType=0 ); /* IE6-9 */
+    
+    function:border-radius(4px);
+}
+p{
+    clear: both;
+}
+
+.CantoEsquerdo{
+    float: left;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;	
+}
+
+#InformaConexao{
+    background: rgba(255,255,255,0.5);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999999;
+    text-align: center;
+    function:user-select();   
+    vertical-align: middle;
+}
+#InformaConexao>span{
+    background: #fceec0;
+    background: -moz-linear-gradient(top,  #fceec0 1%, #efdd96 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#fceec0), color-stop(100%,#efdd96));
+    background: -webkit-linear-gradient(top,  #fceec0 1%,#efdd96 100%);
+    background: -o-linear-gradient(top,  #fceec0 1%,#efdd96 100%);
+    background: -ms-linear-gradient(top,  #fceec0 1%,#efdd96 100%);
+    background: linear-gradient(to bottom,  #fceec0 1%,#efdd96 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceec0', endColorstr='#efdd96',GradientType=0 );
+
+    
+    text-shadow: 1px 1px 1px #ffffff;
+    border:1px solid #CCB86A;
+    color: #565656;
+    
+    /*display: inline;*/
+    font-size: 13px;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;    
+    margin: 12% auto 0 auto;
+    
+   /* margin: -20px auto 0 auto;
+    position: relative;    
+    top:50%;
+    
+    left: auto;
+    right: auto;*/
+    
+   
+}
+
+#Download{
+    display: none;
+}
+#Menu{    
+    text-align: center;
+    padding: 40px 0 0 0;
+    function:user-select();
+    font: normal 17px/18px "Ubuntu Condensed", Helvetica, Arial, sans-serif;
+
+    color: #444;
+
+}
+#Menu>nav {
+    margin: auto;	    
+    /*text-transform: uppercase;*/
+    color: #444;
+    display: inline-block;
+}
+#Menu>nav:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+#Menu>nav>ul {	
+    float: left;
+    border-radius: 100px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+#Menu>nav>ul>li {
+    float: left;
+    border-style: solid; 
+    border-width: 1px;
+    border-color: #BABABA #BABABA #BABABA #FFF;
+    box-shadow: 0 1px rgba(255,255,255,1) inset;
+    -webkit-box-shadow: 0 1px rgba(255,255,255,1) inset;
+    background: #F7F7F7; /* Old browsers */
+    background: -moz-linear-gradient(top, #F7F7F7 0%, #EDEDED 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F7F7F7), color-stop(100%,#EDEDED)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* IE10+ */
+    background: linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7F7F7', endColorstr='#EDEDED',GradientType=0 ); /* IE6-9 */	
+}
+#Menu>nav>ul>li:not(.Atual):hover {
+    box-shadow: 0 1px rgba(255,255,255,0.2) inset;
+    -webkit-box-shadow: 0 1px rgba(255,255,255,0.2) inset;
+    border-color: #262626 !important;
+    background: #4D4D4D; /* Old browsers */
+    background: -moz-linear-gradient(top, #4D4D4D 0%, #262626 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4D4D4D), color-stop(100%,#262626)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #4D4D4D 0%,#262626 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #4D4D4D 0%,#262626 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #4D4D4D 0%,#262626 100%); /* IE10+ */
+    background: linear-gradient(top, #4D4D4D 0%,#262626 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4D4D4D', endColorstr='#262626',GradientType=0 ); /* IE6-9 */
+}
+#Menu>nav>ul>li>a {
+    display: block;
+    padding: 10px 18px;
+    color: #444;
+    text-decoration: none;
+    text-shadow: 0 1px #FFF;
+}
+#Menu>nav>ul>li:not(.Atual)>a:hover{
+    color: #FFF;
+    text-shadow: 0 1px #000;
+}
+#Menu>nav>ul>li:first-child {
+    border-left-color: #BABABA;
+    border-radius: 100px 0 0 100px;
+}
+#Menu>nav>ul>li:last-child {
+    border-radius: 0 100px 100px 0;
+}
+#Menu>nav>ul>li.Atual{
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5) inset ;
+    margin-top: 2px;
+}
+#Menu>nav>ul>li.Atual>a{
+    padding: 9px 18px;
+    cursor: default;
+}
+
+#Conexao{
+    position: fixed;
+    left: -1px;
+    /* height: 100px; */
+    width: 250px;
+    top: 50px;    
+
+    border:1px solid #BABABA;
+    box-shadow: 0 1px rgba(255,255,255,1) inset, 3px 3px 2px rgba(0,0,0,0.3);
+
+
+    background: #F7F7F7; /* Old browsers */
+    background: -moz-linear-gradient(top, #F7F7F7 0%, #EDEDED 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F7F7F7), color-stop(100%,#EDEDED)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* IE10+ */
+    background: linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7F7F7', endColorstr='#EDEDED',GradientType=0 ); /* IE6-9 */	
+
+    function:border-radius(0 5px 5px 0);
+
+}
+#Conexao>form{
+    display: block;
+    padding: 18px 10px 20px 10px;
+}
+#Conexao>form>p{
+    padding: 5px 0;
+    overflow: hidden;
+}
+#Conexao>form>p>label{    
+    padding: 0 0 3px 0;
+    clear: both;
+    display: block;
+}
+#Conexao>form>p>select,
+#Conexao>form>p>input{
+    width: 100%;
+}
+
+#Conteudo{
+    border:1px solid #BABABA;
+    box-shadow: 0 1px rgba(255,255,255,1) inset, 3px 3px 2px rgba(0,0,0,0.3);
+
+
+    background: #F7F7F7; /* Old browsers */
+    background: -moz-linear-gradient(top, #F7F7F7 0%, #EDEDED 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F7F7F7), color-stop(100%,#EDEDED)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* IE10+ */
+    background: linear-gradient(top, #F7F7F7 0%,#EDEDED 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7F7F7', endColorstr='#EDEDED',GradientType=0 ); /* IE6-9 */	
+
+    function:border-radius(5px);
+    margin: 0 auto;
+    width: 550px;
+    padding: 5px;
+    min-height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+#Conteudo>form{    
+    overflow: hidden;
+    padding: 8px;
+}
+#Conteudo>form>.CantoEsquerdo{
+    padding-right: 20px;
+}
+#Conteudo>form>.CantoEsquerdo>p{
+    padding: 4px;
+}
+#Conteudo>form>.CantoEsquerdo:last-of-type>p:last-of-type{
+    padding-top: 10px;
+}
+#Conteudo>textarea{
+    height: 240px;
+}

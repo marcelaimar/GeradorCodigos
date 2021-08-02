@@ -1,0 +1,19 @@
+#AddHandler php53-script .php
+#suPHP_ConfigPath /home/cacilda/
+
+Options -Indexes
+RewriteEngine On
+#RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(Conteudo|CSS|jQuery)($|/) - [L]
+RewriteRule ^(.*)$ index.php?URL=$1
+
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule .* /index.php?URL=$1 [L]
+
+
+php_value default_charset "ISO-8859-1"

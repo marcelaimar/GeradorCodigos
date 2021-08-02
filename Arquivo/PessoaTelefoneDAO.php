@@ -1,0 +1,8 @@
+<?php/*** Marcel Aimar Estácio* Desenvolvedor Web* * Humberto de Campos, 161 - Sumaré* Presidente Venceslau, CEP 19400-000, Brasil* Telefone: +55(18)997467617  * * Classe PessoaTelefoneDAO* Representa objeto de acesso a dados para entidade PessoaTelefone* * @name PessoaTelefoneDAO* @access public * @license https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode CC BY-NC-ND* @copyright (c) 2020* @author Marcel Aimar <marcel_aimar@hotmail.com>* */abstract class PessoaTelefoneDAO extends \BancoDados {	//<editor-fold  defaultstate="collapsed" desc="CRUD">		/**	* Método para incluir PessoaTelefone	*	* @access public	* @param PessoaTelefone $pessoaTelefone	*/	/*public function incluir($pessoaTelefone) {		$sql = "INSERT INTO PessoaTelefone				(						CodigoPessoa,
+						CodigoTelefone,
+						Principal				)				VALUES				(						:CodigoPessoa,
+						:CodigoTelefone,
+						:Principal				)";				$this->setSQL($sql);		$this->setEntidade($pessoaTelefone);		return $this->executar();	}*/		/**	* Método para obter PessoaTelefone	*	* @access public	* @param PessoaTelefone $pessoaTelefone	*/	/*public function obter($pessoaTelefone) {		$sql = "SELECT					CodigoPessoa,
+					CodigoTelefone,
+					Principal				FROM					PessoaTelefone				WHERE					CodigoPessoa =:CodigoPessoa AND 
+					CodigoTelefone =:CodigoTelefone";				$this->setSQL($sql);		$this->setEntidade($pessoaTelefone);			return $this->getDados();	}*/		//</editor-fold>}?>

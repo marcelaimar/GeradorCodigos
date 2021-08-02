@@ -1,0 +1,81 @@
+/* 
+    Arquivo folha de estilo em cascata: Funcoes&Variaveis
+
+    Criado em : 30/08/2014, 09:07:30
+    Autor     : MarceL AimaR (marcel_aimar@hotmail.com)    
+    Arquivo   : Funcoes&Variaveis.css 
+    Encoding  : ISO-8859-1   
+*/
+
+::global_functions {
+    /* Função para atribuir "transform" para todos os navegadores ""*/
+    function:transform(_value_){
+        transform: _value_; 
+        -ms-transform:_value_; 
+        -webkit-transform: _value_;
+    }
+
+    function:calc(_attr_, _calc_){
+        _attr_: -webkit-calc(_calc_);  
+        _attr_: -moz-calc(_calc_);     
+        _attr_: calc(_calc_);
+    }
+
+    function: text-overflow(){
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    function: border-radius(_value_){
+        -webkit-border-radius: _value_;
+        -moz-border-radius: _value_;
+        border-radius: _value_;
+    }
+
+    function: opacity(_value_, _msvalue_){  
+        -khtml-opacity:_value_; 
+        -moz-opacity:_value_; 
+        -ms-filter:"alpha(opacity=_msvalue_)";
+        filter:alpha(opacity=_msvalue_);
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=_value_);
+        opacity:_value_; 
+    }
+
+    function: user-select(_value_ none){
+        -moz-user-select: _value_;
+        -khtml-user-select: _value_;
+        -webkit-user-select: _value_;
+        user-select: _value_;
+    }
+
+    function: border-box(){
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;    
+        box-sizing: border-box;
+    }
+
+    function: box-shadow(_value_){
+        -webkit-box-shadow: _value_;
+        -moz-box-shadow: _value_;
+        box-shadow: _value_;
+    }
+
+    function: background-size(_value_){
+        background-size: _value_;
+        -moz-background-size: _value_;
+        -webkit-background-size: _value_;
+    }
+
+    function: sprite(_width_ 10px, _height_ 10px, _positionLeft_ 0, _positionTop_ 0){
+        width: _width_;
+        height: _height_;          
+        overflow: hidden;
+        text-indent: -99999999px;
+        background: url("Imagem/Imagens.png") no-repeat _positionLeft_ _positionTop_;
+    }
+}
+::global_variables{
+    _cinza:#3d3d3d; 
+    _fundo:green;
+}

@@ -1,0 +1,14 @@
+<?php
+${Cabecalho}
+class ${PrefixoClasse}${Nome} {
+
+    //<editor-fold  defaultstate="collapsed" desc="Declaração de variáveis">    ${Declaracoes}
+    //</editor-fold>
+    //<editor-fold  defaultstate="collapsed" desc="Construtor">
+    function __construct(${Nome} $${Nome} = NULL) {
+        $this->${Nome} = $${Nome};        ${Inicializacoes}
+    }
+    //</editor-fold>  
+    //<editor-fold  defaultstate="collapsed" desc="Atributos">${Atributos}
+    //</editor-fold>
+}

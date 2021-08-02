@@ -1,0 +1,179 @@
+<?php
+${Cabecalho}
+class ${PrefixoClasse}${Nome} {
+
+    //<editor-fold  defaultstate="collapsed" desc="Declaração de variáveis">
+${Declaracoes}
+    
+    //</editor-fold>
+    //<editor-fold  defaultstate="collapsed" desc="Construtor">
+    public function __construct() {
+        //$this->Valida${Nome} = new Valida${Nome}();
+    }
+
+    //</editor-fold>
+    //<editor-fold  defaultstate="collapsed" desc="CRUD">
+    /**
+     * Incluir ${Nome}
+     * @param ${Nome} $${Nome}
+     */
+    public function Incluir(${Nome} $${Nome}, BancoDados $Transacao = NULL) {
+       // $this->Valida${Nome}->Incluir($${Nome});
+
+        /* 
+        $BancoDados = (is_null($Transacao)) ? new BancoDados() : $Transacao;
+        $${Nome}ID =  $BancoDados->Incluir($${Nome}); 
+        */
+
+
+       /* $SQL = "${InsertSQL}";
+
+        
+        if(is_null($Transacao)) {
+                $BancoDados = new BancoDados();
+                $BancoDados->abrirTransacao();
+        }else{
+                $BancoDados = $Transacao;
+        }
+        
+        $BancoDados->setSQL($SQL);
+        $BancoDados->setEntidade($${Nome});
+        $BancoDados->executar();
+        $${Nome}->set${Nome}ID($BancoDados->getCodigoIncluido());
+		
+		if(is_null($Transacao)) {
+        $BancoDados->fecharTransacao();
+		}
+		
+        */
+    }
+
+    /**
+     * Atualizar dados da entidade ${Nome}
+     * @param ${Nome} $${Nome}
+     */
+    public function Alterar(${Nome} $${Nome}, BancoDados $Transacao = NULL) {
+        // $this->Valida${Nome}->Alterar($${Nome});
+
+         /* 
+        $BancoDados = (is_null($Transacao)) ? new BancoDados() : $Transacao;
+        $BancoDados->Alterar($${Nome}); 
+        */
+
+         /*$SQL = "${UpdateSQL}";
+
+       
+        $BancoDados = (is_null($Transacao)) ? new BancoDados() : $Transacao;
+        $BancoDados->setSQL($SQL);
+        $BancoDados->setEntidade($${Nome});        
+        $BancoDados->executar();
+        */
+    }
+
+    /**
+     * Listar ${Nome}s
+     * @param ${Nome} $${Nome}
+     */
+    public function Listar(${Nome} $${Nome}, BancoDados $Transacao = NULL) {   
+        // $this->Valida${Nome}->Listar($${Nome});
+
+         /* 
+        $BancoDados = (is_null($Transacao)) ? new BancoDados() : $Transacao;
+        return $BancoDados->Listar($${Nome}); 
+        */
+
+         /* $SQL = "${SelectSQL}";
+        
+     
+        $BancoDados = (is_null($Transacao)) ? new BancoDados() : $Transacao;
+        $BancoDados->setSQL($SQL);
+        $BancoDados->setEntidade($${Nome});        
+         return $BancoDados->getListaDados();
+        */      
+    }
+
+    /**
+     * Obter ${Nome}
+     * @param ${Nome} $${Nome}
+     */
+    public function Obter(${Nome} $${Nome}, BancoDados $Transacao = NULL) {
+        // $this->Valida${Nome}->Obter($${Nome});
+
+         /* 
+        $BancoDados = (is_null($Transacao)) ? new BancoDados() : $Transacao;
+        return $BancoDados->Obter($${Nome}); 
+        */
+
+        /*$SQL = "${SelectObterSQL}";
+        
+        
+        $BancoDados = (is_null($Transacao)) ? new BancoDados() : $Transacao;
+        $BancoDados->setSQL($SQL);
+        $BancoDados->setEntidade($${Nome});        
+         return $BancoDados->getDados();
+        */
+    }
+
+    /**
+     * Excluir ${Nome}s
+     * Se existe ligações, excluir permanentemente, caso contrário, desabilitar.
+     * @param ${Nome} $${Nome}
+     */
+    public function Excluir(${Nome} $${Nome}, BancoDados $Transacao = NULL) {         
+         /* 
+        $BancoDados = (is_null($Transacao)) ? new BancoDados() : $Transacao;
+        $BancoDados->Excluir($${Nome}); 
+        */
+
+         /*$SQL = "${DeleteSQL}";
+        
+     
+        $BancoDados = (is_null($Transacao)) ? new BancoDados() : $Transacao;
+        $BancoDados->setSQL($SQL);
+        $BancoDados->setEntidade($${Nome});  
+        $BancoDados->executar();
+        */
+    }
+
+    //</editor-fold>
+    //<editor-fold  defaultstate="collapsed" desc="Operações">
+    /**
+     * Verificar se um determinado atributo existe
+     * @param ${Nome} $${Nome}
+     * @param string $Atributo
+     * @return bool
+     */
+    public function Existe(${Nome} $${Nome}, $Atributo, BancoDados $Transacao = NULL) {
+        $Condicao = "TRIM(UPPER({$Atributo})) = TRIM(UPPER(CONVERT(:{$Atributo} USING UTF8))) AND
+                     {$Atributo} IS NOT NULL";
+                  
+        return ($this->Contar($Condicao, $${Nome}, $Transacao) > 0);
+    }
+
+    //</editor-fold>
+    //<editor-fold  defaultstate="collapsed" desc="Protected">
+
+    /**
+     * Contar quantidade de ${Nome}s de uma determinada condição
+     * @param string $Condicao
+     * @param ${Nome} $${Nome}
+     * @return integer
+     */
+    protected function Contar($Condicao,${Nome} $${Nome}, BancoDados $Transacao = NULL) {
+        $SQL = "SELECT
+                    COUNT(*)
+                FROM
+                    ${Nome}
+                WHERE
+                    {$Condicao}";
+
+        $BancoDados = (is_null($Transacao)) ? new BancoDados() : $Transacao;
+        $BancoDados->setSQL($SQL);
+        $BancoDados->setEntidade($${Nome});  
+        return $BancoDados->getContador();
+    }
+
+    //</editor-fold>
+}
+
+?>

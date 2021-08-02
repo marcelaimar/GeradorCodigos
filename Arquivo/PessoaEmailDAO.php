@@ -1,0 +1,8 @@
+<?php/*** Marcel Aimar Estácio* Desenvolvedor Web* * Humberto de Campos, 161 - Sumaré* Presidente Venceslau, CEP 19400-000, Brasil* Telefone: +55(18)997467617  * * Classe PessoaEmailDAO* Representa objeto de acesso a dados para entidade PessoaEmail* * @name PessoaEmailDAO* @access public * @license https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode CC BY-NC-ND* @copyright (c) 2020* @author Marcel Aimar <marcel_aimar@hotmail.com>* */abstract class PessoaEmailDAO extends \BancoDados {	//<editor-fold  defaultstate="collapsed" desc="CRUD">		/**	* Método para incluir PessoaEmail	*	* @access public	* @param PessoaEmail $pessoaEmail	*/	/*public function incluir($pessoaEmail) {		$sql = "INSERT INTO PessoaEmail				(						CodigoEmail,
+						CodigoPessoa,
+						Principal				)				VALUES				(						:CodigoEmail,
+						:CodigoPessoa,
+						:Principal				)";				$this->setSQL($sql);		$this->setEntidade($pessoaEmail);		return $this->executar();	}*/		/**	* Método para obter PessoaEmail	*	* @access public	* @param PessoaEmail $pessoaEmail	*/	/*public function obter($pessoaEmail) {		$sql = "SELECT					CodigoEmail,
+					CodigoPessoa,
+					Principal				FROM					PessoaEmail				WHERE					CodigoEmail =:CodigoEmail AND 
+					CodigoPessoa =:CodigoPessoa";				$this->setSQL($sql);		$this->setEntidade($pessoaEmail);			return $this->getDados();	}*/		//</editor-fold>}?>
